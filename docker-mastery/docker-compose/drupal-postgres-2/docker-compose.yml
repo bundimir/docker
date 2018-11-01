@@ -1,6 +1,7 @@
 version: '2'
 
 services:
+
   drupal:
     image: custom-drupal
     build:
@@ -15,7 +16,7 @@ services:
   postgres:
     image:  postgres
     environment: 
-      POSTGRES_PASSWORD: mypass
+      - POSTGRES_PASSWORD=mypass
     volumes: 
       - drupal-data:/var/lib/postgresql/data
 
