@@ -16,7 +16,7 @@ services:
   postgres:
     image:  postgres
     environment: 
-      - POSTGRES_PASSWORD=mypasswd
+      - POSTGRES_PASSWORD=mypass
     volumes: 
       - drupal-data:/var/lib/postgresql/data
 
