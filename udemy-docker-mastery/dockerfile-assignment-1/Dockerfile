@@ -1,7 +1,7 @@
 FROM node:8-alpine
 EXPOSE 3000
 RUN apk add --update tini \
-    mkdir -p /usr/src/app 
+    && mkdir -p /usr/src/app 
 
 COPY package.json /usr/src/app
 
