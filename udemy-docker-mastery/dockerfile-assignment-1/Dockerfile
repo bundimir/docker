@@ -12,4 +12,4 @@ RUN npm install \
 
 COPY *.* /usr/src/app/
 
-CMD [/sbin/tini -- node ./bin/www]
+CMD ["/sbin/tini -- node ./bin/www"]
