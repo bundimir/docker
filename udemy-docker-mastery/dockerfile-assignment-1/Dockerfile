@@ -3,7 +3,7 @@ EXPOSE 3000
 RUN apk add --update tini \
     && mkdir -p /usr/src/app 
 
-COPY package.json /usr/src/app
+COPY package.json /usr/src/app/package.json
 
 WORKDIR /usr/src/app
 
@@ -12,4 +12,4 @@ RUN npm install \
 
 COPY *.* /usr/src/app/
 
-CMD ["/sbin/tini -- node ./bin/www"]
+CMD [/sbin/tini -- node ./bin/www]
