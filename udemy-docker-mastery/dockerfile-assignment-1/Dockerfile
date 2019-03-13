@@ -5,9 +5,11 @@ RUN apk add --update tini \
 
 COPY package.json /usr/src/app
 
+WORKDIR /usr/src/app
+
 RUN npm install \
     && npm cache clean --force
 
-COPY *.* /usr/src/app
+COPY *.* /usr/src/app/
 
 CMD [/sbin/tini -- node ./bin/www]
